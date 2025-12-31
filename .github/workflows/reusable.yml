@@ -1,9 +1,13 @@
-name: Reusable Workflow
+name: Reusable Workflow with Input
 on:
-  workflow_call: # هذا هو المحرك الذي يجعل الملف قابلاً لإعادة الاستخدام
+  workflow_call:
+    inputs:
+      user_name: # هنا نعرّف اسماً للمدخل الذي سنستقبله
+        required: true
+        type: string
 
 jobs:
-  hello:
+  greet:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello, this is my first reusable workflow!"
+      - run: echo "مرحباً يا ${{ inputs.user_name }}، تم تشغيل الأكشن بنجاح من القالب!"

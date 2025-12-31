@@ -1,8 +1,10 @@
-name: Call Reusable Workflow
+name: Test My Input
 on:
   push:
     branches: [ "main" ]
 
 jobs:
-  call-workflow:
+  call-job:
     uses: ./.github/workflows/reusable.yml
+    with:
+      user_name: "سمية" # يمكنكِ تغيير الاسم هنا كما تحبين

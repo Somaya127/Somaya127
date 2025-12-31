@@ -7,4 +7,4 @@ jobs:
   call-job:
     uses: ./.github/workflows/reusable.yml
     with:
-      user_name: "سمية" # يمكنكِ تغيير الاسم هنا كما تحبين
+      user_name: "سمية" # تمرير القيمة للقالب

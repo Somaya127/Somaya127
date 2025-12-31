@@ -2,7 +2,7 @@ name: Reusable Workflow with Input
 on:
   workflow_call:
     inputs:
-      user_name: # هنا نعرّف اسماً للمدخل الذي سنستقبله
+      user_name: # تعريف المدخل
         required: true
         type: string
 
@@ -10,4 +10,4 @@ jobs:
   greet:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "مرحباً يا ${{ inputs.user_name }}، تم تشغيل الأكشن بنجاح من القالب!"
+      - run: echo "مرحباً يا ${{ inputs.user_name }}، تم تشغيل الأكشن بنجاح!"

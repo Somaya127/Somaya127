@@ -1,0 +1,9 @@
+name: Reusable Workflow
+on:
+  workflow_call: # هذا هو المحرك الذي يجعل الملف قابلاً لإعادة الاستخدام
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello, this is my first reusable workflow!"
